@@ -1,0 +1,14 @@
+{
+  "candidate": "dense_pca_99",
+  "split": "stress_mask_every_fifth_selected_raw_channel",
+  "macro_AP": 0.5001416553750655,
+  "micro_AP": 0.26530961251865987,
+  "macro_F1": 0.3543714562725355,
+  "macro_recall": 0.3802272715215416,
+  "micro_F1": 0.23028227893458614,
+  "hamming_loss": 0.14749908447265625,
+  "exact_match": 0.0,
+  "normal_false_alarm_rate": 1.0,
+  "macro_Brier": 0.08951716193493037,
+  "rows": 8192
+}

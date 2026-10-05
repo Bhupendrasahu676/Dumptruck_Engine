@@ -1,0 +1,53 @@
+{
+  "serialization_reload": [
+    {
+      "bundle": "dense_model.joblib",
+      "kind": "dense",
+      "full_test_rows": 24624,
+      "passed": true,
+      "first_episode_rows": 171,
+      "prefix_batch_size_probability_difference": 0.0,
+      "prefix_batch_size_decision_flips": 0,
+      "full_test_probability_matches_saved_selected": false
+    },
+    {
+      "bundle": "tcn_model.joblib",
+      "kind": "tcn",
+      "full_test_rows": 24624,
+      "passed": true,
+      "first_episode_rows": 171,
+      "prefix_batch_size_probability_difference": 0.0012035369873046875,
+      "prefix_batch_size_decision_flips": 0,
+      "full_test_probability_matches_saved_selected": true
+    },
+    {
+      "bundle": "selected_model.joblib",
+      "kind": "tcn",
+      "full_test_rows": 24624,
+      "passed": true,
+      "first_episode_rows": 171,
+      "prefix_batch_size_probability_difference": 0.0012035369873046875,
+      "prefix_batch_size_decision_flips": 0,
+      "full_test_probability_matches_saved_selected": true
+    },
+    {
+      "bundle": "selected_maxf1_model.joblib",
+      "kind": "tcn",
+      "full_test_rows": 24624,
+      "passed": true,
+      "first_episode_rows": 171,
+      "prefix_batch_size_probability_difference": 0.0012035369873046875,
+      "prefix_batch_size_decision_flips": 0,
+      "full_test_probability_matches_saved_selected": true
+    }
+  ],
+  "frozen_policy_sha256": "bb916013cede62d168f3688f3279e08d1963e6c36a6b2ef9fb818903deb794a7",
+  "frozen_before_test_features": true,
+  "model_inputs": 16,
+  "trained_on_all_train_rows": 114912,
+  "no_test_selection_or_calibration": true,
+  "source_sha256_verified": true,
+  "deployment_ready": false,
+  "export_recovery": "Existing checkpoints/predictions used; no retraining, weight changes or threshold refitting",
+  "numerical_note": "CUDA convolution can vary slightly with batch shape; same-batch checkpoint reload reproduces selected full-test probabilities"
+}

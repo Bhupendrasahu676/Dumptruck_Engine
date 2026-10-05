@@ -1,0 +1,94 @@
+{
+  "verified": true,
+  "exact_model_input_count": 16,
+  "input_columns": [
+    "engine.oil_pressure_kpa__residual",
+    "engine.oil_condition_pct__residual",
+    "engine.boost_kpa__residual",
+    "engine.coolant_flow_kg_s__residual",
+    "coolant_condition_pct__residual",
+    "transmission.oil_pressure_kpa__residual",
+    "transmission.oil_condition_pct__residual",
+    "gnss.longitude_deg",
+    "suspension.hydraulic_oil_condition_pct__residual",
+    "engine.oil_level_pct",
+    "engine.coolant_temp_c__residual",
+    "brake.stroke_pct__residual",
+    "gnss.accuracy_m__residual",
+    "gnss.latitude_deg",
+    "transmission.vibration_mm_s__residual",
+    "engine.oil_temp_c__residual"
+  ],
+  "artifact_hash_checks": 32,
+  "prediction_checks": [
+    {
+      "policy": "guarded",
+      "bundle": "selected_model.joblib",
+      "verified": true,
+      "score": {
+        "candidate": "tcn",
+        "split": "test",
+        "macro_AP": 0.8496326454347898,
+        "micro_AP": 0.8596837338350285,
+        "macro_F1": 0.8131303761080857,
+        "macro_recall": 0.7830855750163053,
+        "micro_F1": 0.8192857142857143,
+        "hamming_loss": 0.017980425601039636,
+        "exact_match": 0.7561728395061729,
+        "normal_false_alarm_rate": 0.05333511562625318,
+        "macro_Brier": 0.01578993018237755,
+        "rows": 24624
+      }
+    },
+    {
+      "policy": "maxf1",
+      "bundle": "selected_maxf1_model.joblib",
+      "verified": true,
+      "score": {
+        "candidate": "tcn",
+        "split": "test",
+        "macro_AP": 0.8496326454347898,
+        "micro_AP": 0.8596837338350285,
+        "macro_F1": 0.8272308881805999,
+        "macro_recall": 0.8158529408019874,
+        "micro_F1": 0.7947004447342073,
+        "hamming_loss": 0.022379081384015596,
+        "exact_match": 0.7182423651721898,
+        "normal_false_alarm_rate": 0.23272289800828766,
+        "macro_Brier": 0.01578993018237755,
+        "rows": 24624
+      }
+    }
+  ],
+  "no_weight_or_threshold_changes": true,
+  "deployment_ready": false,
+  "original_test_status": "Previously used synthetic benchmark, not newly untouched field data",
+  "external_evaluation": {
+    "scores": {
+      "candidate": "tcn",
+      "split": "external_existing_seed_no_tuning",
+      "macro_AP": 0.8541471877545521,
+      "micro_AP": 0.8464186937347468,
+      "macro_F1": 0.8074913377087829,
+      "macro_recall": 0.7790004334410341,
+      "micro_F1": 0.7932619837202292,
+      "hamming_loss": 0.021560397409293844,
+      "exact_match": 0.7051499717034522,
+      "normal_false_alarm_rate": 0.032939189189189186,
+      "macro_Brier": 0.018507085003662452,
+      "rows": 15903
+    },
+    "data_path": "analysis/results_enhanced_multilabel/independent_seed_validation/independent_fault_batch.csv",
+    "source_sha256": "b4be59620e60a41718fe1bdbce250f7b2bc0733fd9b22f312772cb6de94df8e7",
+    "independent_variant_seeds": [
+      1161451352,
+      1657261101,
+      2451229838
+    ],
+    "model_input_count": 16,
+    "weights_or_thresholds_fit_on_batch": false,
+    "evidence_status": "Existing different-seed batch previously evaluated in another study; confirmatory cross-seed check, not a newly generated untouched experiment",
+    "engine_identity_note": "Truck names are batch-local; engine_seed sets establish independence",
+    "field_validation": false
+  }
+}

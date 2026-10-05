@@ -1,0 +1,25 @@
+{
+  "verified": true,
+  "corrected_thresholds_match_predictions": true,
+  "RUL_not_fabricated": true,
+  "root_causes_unconfirmed": true,
+  "guarded_model_deployment_ready": false,
+  "scores": {
+    "candidate": "normal_guard_1pct_per_fault",
+    "split": "test_second_use_exploratory",
+    "macro_AP": 0.8906088792827682,
+    "micro_AP": 0.9132987594255974,
+    "macro_F1": 0.8393100870999866,
+    "macro_recall": 0.8195991378945964,
+    "micro_F1": 0.8535129646598479,
+    "hamming_loss": 0.015013300032488628,
+    "exact_match": 0.7941439246263807,
+    "normal_false_alarm_rate": 0.06964309584280176,
+    "macro_Brier": 0.011981417933031778,
+    "rows": 24624
+  },
+  "post_hoc_second_test_use": true,
+  "current_runner_sha256": "3d31096caecda27c75d8cd463a8e3dacdc32f5d33cf64824d8ce939e151aee0e",
+  "original_runner_sha256": "d5f8be52d287eef46c636fbcc69641914d46197fe2ba4db8348de9717fe201f8",
+  "post_run_code_change": "exact precision-recall thresholds; zero-positive metric handling; imputer named-column handling. No model weights changed."
+}

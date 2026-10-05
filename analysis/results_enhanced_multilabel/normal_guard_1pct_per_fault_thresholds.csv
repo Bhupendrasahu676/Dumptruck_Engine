@@ -1,0 +1,17 @@
+fault,threshold,normal_FPR_cap,tuning_partition
+fault_label.engine_oil_pump_wear,0.8464151620864868,0.01,original_two_validation_trucks
+fault_label.piston_ring_damage,0.5260881185531616,0.01,original_two_validation_trucks
+fault_label.turbo_exhaust_fault,0.3321031928062439,0.01,original_two_validation_trucks
+fault_label.coolant_system_failure,0.5357504487037659,0.01,original_two_validation_trucks
+fault_label.coolant_degradation,0.3069324791431427,0.01,original_two_validation_trucks
+fault_label.gearbox_seal_wear,0.3179180920124054,0.01,original_two_validation_trucks
+fault_label.gearbox_bearing_wear,0.8013315796852112,0.01,original_two_validation_trucks
+fault_label.hydraulic_normal_aging,0.057014599442481995,0.01,original_two_validation_trucks
+fault_label.hydraulic_contamination,0.29687175154685974,0.01,original_two_validation_trucks
+fault_label.bearing_failure,0.33298254013061523,0.01,original_two_validation_trucks
+fault_label.low_oil,0.17213569581508636,0.01,original_two_validation_trucks
+fault_label.overheat,0.2083897888660431,0.01,original_two_validation_trucks
+fault_label.brake_wear,0.14010317623615265,0.01,original_two_validation_trucks
+fault_label.perception_degraded,0.14165614545345306,0.01,original_two_validation_trucks
+fault_label.sensor_fault,0.4221615791320801,0.01,original_two_validation_trucks
+fault_label.unrelated_multi_blip,0.6497988104820251,0.01,original_two_validation_trucks

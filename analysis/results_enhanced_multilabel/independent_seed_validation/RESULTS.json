@@ -1,0 +1,53 @@
+{
+  "score": {
+    "candidate": "frozen_alarm_guarded_model",
+    "split": "fresh_seed_external_all_rows",
+    "macro_AP": 0.8897108845111215,
+    "micro_AP": 0.8841801073108172,
+    "macro_F1": 0.8574267177793987,
+    "macro_recall": 0.8232563190932436,
+    "micro_F1": 0.8418552875695733,
+    "hamming_loss": 0.016749984279695655,
+    "exact_match": 0.7608627303024587,
+    "normal_false_alarm_rate": 0.02956081081081081,
+    "macro_Brier": 0.014488976630128844,
+    "rows": 15903
+  },
+  "seed": 20261006,
+  "rows": 15903,
+  "receipt": {
+    "output_path": "/home/bhupendra676/Project/Engine/analysis/results_enhanced_multilabel/independent_seed_validation/independent_fault_batch.csv",
+    "schema_path": "/home/bhupendra676/Project/Engine/analysis/results_enhanced_multilabel/independent_seed_validation/independent_fault_batch.schema.json",
+    "manifest_path": "/home/bhupendra676/Project/Engine/analysis/results_enhanced_multilabel/independent_seed_validation/independent_fault_batch.manifest.json",
+    "engines": 3,
+    "episodes": 93,
+    "rows": 15903,
+    "input_columns": 369,
+    "split_membership": {
+      "train": [
+        "virtual-0003"
+      ],
+      "validation": [
+        "virtual-0001"
+      ],
+      "test": [
+        "virtual-0002"
+      ]
+    },
+    "sha256": {
+      "independent_fault_batch.csv": "b4be59620e60a41718fe1bdbce250f7b2bc0733fd9b22f312772cb6de94df8e7",
+      "independent_fault_batch.schema.json": "b5c1650b438ce6731ae1dbf485a4c7f3ca23266079fa96f7b8369072bff253ad",
+      "independent_fault_batch.manifest.json": "dc8f4879b770320bee320fd98886f5402d8d01ce8ee152d4b482936d9797fbec"
+    }
+  },
+  "independent_engine_variant_seeds": [
+    1161451352,
+    1657261101,
+    2451229838
+  ],
+  "overlap_original_variant_seeds": false,
+  "weights_and_thresholds_frozen_before_generation": true,
+  "training_or_tuning_performed": false,
+  "batch_semantics": "All rows are external evaluation, regardless locally generated split metadata. Engine ID strings are batch-local; independent engine_seed sets establish distinct synthetic variants.",
+  "limitations": "Only3additional virtualvariants, identical physics/routefamily; not field validation or confirmed rootcauses/RUL"
+}

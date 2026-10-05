@@ -1,0 +1,212 @@
+{
+  "exclude_gnss_brakes": true,
+  "original_input_count": 369,
+  "remaining_input_count": 318,
+  "removed_inputs": [
+    {
+      "attribute": "brake.accumulator_pressure_bar",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.cooling_temp_c",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.disc_temp_c",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.line_pressure_bar",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.oil_temp_c",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.pad_wear_pct",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.pedal_pct",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.stroke_pct",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "gnss.accuracy_m",
+      "reason": "GNSS/GPS-related input"
+    },
+    {
+      "attribute": "gnss.altitude_m",
+      "reason": "GNSS/GPS-related input"
+    },
+    {
+      "attribute": "gnss.heading_deg",
+      "reason": "GNSS/GPS-related input"
+    },
+    {
+      "attribute": "gnss.latitude_deg",
+      "reason": "GNSS/GPS-related input"
+    },
+    {
+      "attribute": "gnss.longitude_deg",
+      "reason": "GNSS/GPS-related input"
+    },
+    {
+      "attribute": "gnss.satellites",
+      "reason": "GNSS/GPS-related input"
+    },
+    {
+      "attribute": "gnss.speed_mps",
+      "reason": "GNSS/GPS-related input"
+    },
+    {
+      "attribute": "brake.accumulator_pressure_bar__available_mask",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.cooling_temp_c__available_mask",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.disc_temp_c__available_mask",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.line_pressure_bar__available_mask",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.oil_temp_c__available_mask",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.pad_wear_pct__available_mask",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.pedal_pct__available_mask",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.stroke_pct__available_mask",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "gnss.accuracy_m__available_mask",
+      "reason": "GNSS/GPS-related input"
+    },
+    {
+      "attribute": "gnss.altitude_m__available_mask",
+      "reason": "GNSS/GPS-related input"
+    },
+    {
+      "attribute": "gnss.heading_deg__available_mask",
+      "reason": "GNSS/GPS-related input"
+    },
+    {
+      "attribute": "gnss.latitude_deg__available_mask",
+      "reason": "GNSS/GPS-related input"
+    },
+    {
+      "attribute": "gnss.longitude_deg__available_mask",
+      "reason": "GNSS/GPS-related input"
+    },
+    {
+      "attribute": "gnss.satellites__available_mask",
+      "reason": "GNSS/GPS-related input"
+    },
+    {
+      "attribute": "gnss.speed_mps__available_mask",
+      "reason": "GNSS/GPS-related input"
+    },
+    {
+      "attribute": "context.mode_braking",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.pad_wear_pct__residual",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.pad_wear_pct__rate",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.pad_wear_pct__residual_slope_120s",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.pad_wear_pct__mean_30s",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.pad_wear_pct__std_30s",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.stroke_pct__residual",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.stroke_pct__rate",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.stroke_pct__residual_slope_120s",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.stroke_pct__mean_30s",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.stroke_pct__std_30s",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.disc_temp_c__residual",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.disc_temp_c__rate",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.disc_temp_c__residual_slope_120s",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.disc_temp_c__mean_30s",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "brake.disc_temp_c__std_30s",
+      "reason": "Brake/braking-related input"
+    },
+    {
+      "attribute": "gnss.accuracy_m__residual",
+      "reason": "GNSS/GPS-related input"
+    },
+    {
+      "attribute": "gnss.accuracy_m__rate",
+      "reason": "GNSS/GPS-related input"
+    },
+    {
+      "attribute": "gnss.accuracy_m__residual_slope_120s",
+      "reason": "GNSS/GPS-related input"
+    },
+    {
+      "attribute": "gnss.accuracy_m__mean_30s",
+      "reason": "GNSS/GPS-related input"
+    },
+    {
+      "attribute": "gnss.accuracy_m__std_30s",
+      "reason": "GNSS/GPS-related input"
+    }
+  ],
+  "target_policy": "All16 labels retained for comparison; brake_wear lacks direct evidence and is not approved for prediction"
+}

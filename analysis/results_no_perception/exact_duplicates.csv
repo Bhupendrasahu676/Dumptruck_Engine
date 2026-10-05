@@ -1,0 +1,3 @@
+removed,kept,reason
+engine.coolant_pump_temp_c,engine.coolant_temp_c,Exact duplicate on train
+transmission.input_rpm,engine.rpm,Exact duplicate on train

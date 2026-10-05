@@ -1,0 +1,15 @@
+{
+  "weights": {
+    "engine": 0.3,
+    "cooling": 0.15,
+    "transmission": 0.15,
+    "hydraulics": 0.15,
+    "brakes": 0.1,
+    "structure": 0.1,
+    "perception": 0.05
+  },
+  "sensor_basis": "Existing observation-only subsystem residual/persistence heuristics, not learned real condition labels",
+  "aggregation": "Minimum for conservative flag, weighted for trend; all required subsystems must be observed",
+  "DL_probabilities": "Kept separate; no arbitrary probability multiplier or double-counting of the same sensor deviation",
+  "RUL": "No independent outcomes/censoring data: no physical RUL model trained and no point estimate fabricated"
+}

@@ -1,0 +1,149 @@
+{
+  "frozen_at_utc": "2026-10-05T16:49:04.335877+00:00",
+  "source_sha256": "2a4790199945f331987897a86f9329bacb03f9b5ac9d0cb893ae2b7d52adf448",
+  "input_columns": [
+    "engine.oil_pressure_kpa__residual",
+    "engine.oil_condition_pct__residual",
+    "engine.boost_kpa__residual",
+    "engine.coolant_flow_kg_s__residual",
+    "coolant_condition_pct__residual",
+    "transmission.oil_pressure_kpa__residual",
+    "transmission.oil_condition_pct__residual",
+    "gnss.longitude_deg",
+    "suspension.hydraulic_oil_condition_pct__residual",
+    "engine.oil_level_pct",
+    "engine.coolant_temp_c__residual",
+    "brake.stroke_pct__residual",
+    "gnss.accuracy_m__residual",
+    "gnss.latitude_deg",
+    "transmission.vibration_mm_s__residual",
+    "engine.oil_temp_c__residual"
+  ],
+  "target_columns": [
+    "fault_label.engine_oil_pump_wear",
+    "fault_label.piston_ring_damage",
+    "fault_label.turbo_exhaust_fault",
+    "fault_label.coolant_system_failure",
+    "fault_label.coolant_degradation",
+    "fault_label.gearbox_seal_wear",
+    "fault_label.gearbox_bearing_wear",
+    "fault_label.hydraulic_normal_aging",
+    "fault_label.hydraulic_contamination",
+    "fault_label.bearing_failure",
+    "fault_label.low_oil",
+    "fault_label.overheat",
+    "fault_label.brake_wear",
+    "fault_label.perception_degraded",
+    "fault_label.sensor_fault",
+    "fault_label.unrelated_multi_blip"
+  ],
+  "selected_kind": "tcn",
+  "primary_policy": "guarded",
+  "alternate_policy": "maxf1",
+  "policy_names": {
+    "maxf1": "exact_validation_max_F1",
+    "guarded": "exact_validation_max_F1_with_1pct_per_label_normal_guard"
+  },
+  "selection_metric": "raw validation macro AP; absent labels score zero",
+  "tie_break": "dense",
+  "calibration_truck": "virtual-0009",
+  "threshold_trucks": [
+    "virtual-0011",
+    "virtual-0016"
+  ],
+  "calibration": "per-label sigmoid fit ONLY on reserved validation truck; no-variation labels left raw",
+  "guard": "1% per-label FPR on all-zero-label validation rows, not any-label or test guarantee",
+  "candidates": {
+    "dense": {
+      "selection_macro_AP": 0.8644074771742287,
+      "best_epoch": 17,
+      "thresholds": {
+        "maxf1": [
+          0.7055622935295105,
+          0.8892802000045776,
+          0.0916852131485939,
+          0.8975399136543274,
+          0.4868488907814026,
+          0.8303784728050232,
+          0.8627251982688904,
+          0.06354392319917679,
+          0.43604332208633423,
+          0.9466118812561035,
+          0.16542872786521912,
+          0.2788907289505005,
+          0.1448148488998413,
+          0.3200121819972992,
+          0.1992182433605194,
+          0.9683849811553955
+        ],
+        "guarded": [
+          0.7055622935295105,
+          0.8892802000045776,
+          0.0916852131485939,
+          0.8975399136543274,
+          0.4868488907814026,
+          0.8303784728050232,
+          0.8627251982688904,
+          0.06532364338636398,
+          0.43604332208633423,
+          0.9466118812561035,
+          0.16542872786521912,
+          0.2788907289505005,
+          0.20719076693058014,
+          0.3200121819972992,
+          0.33971431851387024,
+          0.9683849811553955
+        ]
+      },
+      "checkpoint_sha256": "f6e225387a3ffa89eeef9d2e8c1d435acf47f2ff47d58de18700badf24b3a779",
+      "bundle_sha256": "ef1db1aff4b03493b85614865b18eb50d175f3c1adef60c400eda0cd8b448ea9"
+    },
+    "tcn": {
+      "selection_macro_AP": 0.8707523485745632,
+      "best_epoch": 4,
+      "thresholds": {
+        "maxf1": [
+          0.706234872341156,
+          0.8077448606491089,
+          0.17682987451553345,
+          0.10908091813325882,
+          0.20282530784606934,
+          0.5097256898880005,
+          0.8140220046043396,
+          0.07226532697677612,
+          0.15628604590892792,
+          0.7365347743034363,
+          0.3127272427082062,
+          0.14437849819660187,
+          0.2884577810764313,
+          0.21849195659160614,
+          0.19177229702472687,
+          0.7118946313858032
+        ],
+        "guarded": [
+          0.706234872341156,
+          0.8077448606491089,
+          0.17682987451553345,
+          0.10908091813325882,
+          0.20282530784606934,
+          0.5097256898880005,
+          0.8140220046043396,
+          0.07623910903930664,
+          0.15628604590892792,
+          0.7365347743034363,
+          0.3127272427082062,
+          0.14437849819660187,
+          0.2884577810764313,
+          0.21849195659160614,
+          0.29924097657203674,
+          0.7118946313858032
+        ]
+      },
+      "checkpoint_sha256": "cb331c3eb242e0d46faec1866e2babf7b32209cbc700a7a22ae6654bfd579435",
+      "bundle_sha256": "04902f0a1e5e1270c667c8d27c9dccf79c80ac6d53b330a65e20fd62d19f9bab"
+    }
+  },
+  "test_features_loaded": false,
+  "test_predictions_computed": false,
+  "deployment_ready": false
+}

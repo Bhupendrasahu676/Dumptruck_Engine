@@ -1,0 +1,47 @@
+# Private workspace state, attachments, credentials and logs
+/.omnirush/
+/.opencode/
+/telemetry_logs/
+.env
+.env.*
+!.env.example
+*.log
+*.pem
+*.key
+credentials*.json
+secrets*.json
+/Screenshot*.png
+
+# Python environments, caches and build outputs
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+build/
+dist/
+*.egg-info/
+.DS_Store
+
+# Generated sensor datasets: retain schemas/manifests, not large samples
+/datasets/**/*.csv
+/datasets/**/*.jsonl
+
+# Generated model weights and numerical arrays; keep source and reports
+*.joblib
+*.pt
+*.pth
+*.onnx
+*.npy
+*.npz
+
+# Large generated analysis tables; keep compact feature/metric CSVs
+/analysis/**/pca_dataset.csv
+/analysis/**/reduced_attributes_dataset.csv
+/analysis/**/independent_fault_batch.csv
+/analysis/**/*predictions*.csv
+/analysis/**/health_assessment.csv
+/analysis/**/health_weighted_assessment.csv

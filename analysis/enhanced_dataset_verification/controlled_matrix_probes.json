@@ -1,0 +1,43 @@
+{
+  "source": "separate fixed-severity developed synthetic probes, not the generated batch or real diagnosis accuracy",
+  "time_s_approx": 1000,
+  "severity": 1,
+  "results": {
+    "engine_oil_pump_wear": {
+      "mature_contexts_evaluated": 30,
+      "mature_contexts_matching_screen": 30,
+      "nonmatching_contexts": []
+    },
+    "piston_ring_damage": {
+      "mature_contexts_evaluated": 30,
+      "mature_contexts_matching_screen": 30,
+      "nonmatching_contexts": []
+    },
+    "turbo_exhaust_fault": {
+      "mature_contexts_evaluated": 30,
+      "mature_contexts_matching_screen": 30,
+      "nonmatching_contexts": []
+    },
+    "coolant_system_failure": {
+      "mature_contexts_evaluated": 30,
+      "mature_contexts_matching_screen": 30,
+      "nonmatching_contexts": []
+    },
+    "coolant_degradation": {
+      "mature_contexts_evaluated": 30,
+      "mature_contexts_matching_screen": 30,
+      "nonmatching_contexts": []
+    },
+    "gearbox_seal_wear": {
+      "mature_contexts_evaluated": 30,
+      "mature_contexts_matching_screen": 30,
+      "nonmatching_contexts": []
+    },
+    "gearbox_bearing_wear": {
+      "mature_contexts_evaluated": 30,
+      "mature_contexts_matching_screen": 30,
+      "nonmatching_contexts": []
+    }
+  },
+  "threshold_correction": "Pump threshold uses published >98 C with warm ambient allowance, not engine oil stress term."
+}

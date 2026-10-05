@@ -1,0 +1,17 @@
+attribute
+engine.oil_pressure_kpa__residual
+engine.oil_condition_pct__residual
+engine.boost_kpa__residual
+engine.coolant_flow_kg_s__residual
+coolant_condition_pct__residual
+transmission.oil_pressure_kpa__residual
+transmission.oil_condition_pct__residual
+gnss.longitude_deg
+suspension.hydraulic_oil_condition_pct__residual
+engine.oil_level_pct
+engine.coolant_temp_c__residual
+brake.stroke_pct__residual
+gnss.accuracy_m__residual
+gnss.latitude_deg
+transmission.vibration_mm_s__residual
+engine.oil_temp_c__residual

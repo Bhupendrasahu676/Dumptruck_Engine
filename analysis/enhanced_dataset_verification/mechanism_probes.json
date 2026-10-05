@@ -1,0 +1,38 @@
+{
+  "checks": {
+    "engine_oil_pump_wear_pre_onset": true,
+    "engine_oil_pump_wear_localized_channels": true,
+    "pressure_then_temperature_then_block_vibration": true,
+    "permanent_wear_after_recovery": true,
+    "piston_ring_damage_pre_onset": true,
+    "turbo_exhaust_fault_pre_onset": true,
+    "turbo_exhaust_fault_localized_channels": true,
+    "coolant_system_failure_pre_onset": true,
+    "coolant_degradation_pre_onset": true,
+    "coolant_degradation_localized_channels": true,
+    "gearbox_seal_wear_pre_onset": true,
+    "gearbox_seal_wear_localized_channels": true,
+    "gearbox_bearing_wear_pre_onset": true,
+    "hydraulic_normal_aging_pre_onset": true,
+    "hydraulic_contamination_pre_onset": true,
+    "bearing_failure_pre_onset": true,
+    "low_oil_pre_onset": true,
+    "overheat_pre_onset": true,
+    "brake_wear_pre_onset": true,
+    "perception_degraded_pre_onset": true,
+    "sensor_fault_pre_onset": true,
+    "missing_sensor_no_fabricated_health": true,
+    "missing_sensor_mask": true,
+    "no_mechanical_wear_for_sensor": true,
+    "root_cause_and_rul_not_fabricated": true,
+    "unrelated_multi_blip_pre_onset": true
+  },
+  "evidence": {
+    "first_channel_changes_s": {
+      "engine.oil_pressure_kpa": 105.0,
+      "engine.oil_temp_c": 130.0,
+      "engine.block_vibration_mm_s": 160.0
+    }
+  },
+  "source": "matched synthetic counterfactual probes, not field validation"
+}

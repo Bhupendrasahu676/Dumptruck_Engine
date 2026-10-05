@@ -1,0 +1,71 @@
+{
+  "verified": true,
+  "rows": 24624,
+  "probability_columns": 16,
+  "metrics_recomputed": {
+    "candidate": "dense_pca_99_sigmoid_calibrated",
+    "split": "test",
+    "macro_AP": 0.8906088792827682,
+    "micro_AP": 0.9132987594255974,
+    "macro_F1": 0.8407795699616207,
+    "macro_recall": 0.8924928976158621,
+    "micro_F1": 0.5700129905440923,
+    "hamming_loss": 0.07225166504223522,
+    "exact_match": 0.034478557504873296,
+    "normal_false_alarm_rate": 1.0,
+    "macro_Brier": 0.011981417933031778,
+    "rows": 24624
+  },
+  "artifact_digest_checks": 42,
+  "truck_bootstrap_200": {
+    "macro_AP": {
+      "low_2_5": 0.8876816603306517,
+      "high_97_5": 0.8973232095140233
+    },
+    "macro_F1": {
+      "low_2_5": 0.8219215107012041,
+      "high_97_5": 0.8594352121666587
+    },
+    "macro_recall": {
+      "low_2_5": 0.8866854127146644,
+      "high_97_5": 0.9086242684498969
+    },
+    "normal_false_alarm_rate": {
+      "low_2_5": 1.0,
+      "high_97_5": 1.0
+    }
+  },
+  "bootstrap_caveat": "Only three synthetic test trucks; intervals are fragile, not field confidence",
+  "weakest_faults": [
+    {
+      "fault": "fault_label.hydraulic_normal_aging",
+      "AP": 0.11792248715525795,
+      "recall": 1.0,
+      "F1": 0.0990465897247848
+    },
+    {
+      "fault": "fault_label.sensor_fault",
+      "AP": 0.7456009162092786,
+      "recall": 0.7268065268065268,
+      "F1": 0.593113943313677
+    },
+    {
+      "fault": "fault_label.unrelated_multi_blip",
+      "AP": 0.8482139806005726,
+      "recall": 0.6602373887240356,
+      "F1": 0.740432612312812
+    },
+    {
+      "fault": "fault_label.gearbox_seal_wear",
+      "AP": 0.8894861465867043,
+      "recall": 0.7995910020449898,
+      "F1": 0.7987742594484167
+    },
+    {
+      "fault": "fault_label.engine_oil_pump_wear",
+      "AP": 0.8988113500080035,
+      "recall": 0.7689688715953308,
+      "F1": 0.8423015450186467
+    }
+  ]
+}

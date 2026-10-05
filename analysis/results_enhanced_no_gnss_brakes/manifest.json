@@ -1,0 +1,316 @@
+{
+  "source_csv": "/home/bhupendra676/Project/Engine/datasets/dump_truck_enhanced_all_conditions.csv",
+  "source_sha256": "2a4790199945f331987897a86f9329bacb03f9b5ac9d0cb893ae2b7d52adf448",
+  "source_schema_sha256": "b5c1650b438ce6731ae1dbf485a4c7f3ca23266079fa96f7b8369072bff253ad",
+  "script_sha256": "0e8d12ecd9a7ebd9231097eaa1959a624889043a257594378ef275e54899835f",
+  "seed": 793,
+  "epochs_budget": 18,
+  "selected_model": "dense_pca_99",
+  "selected_DL": "dense_pca_99",
+  "selection_policy": "highest validation macro AP; tree subset smallest within absolute0.015 of best, then full-fit finalist",
+  "train_rows": 114912,
+  "validation_tuning_rows": 16416,
+  "calibration_rows": 8208,
+  "test_rows": 24624,
+  "calibration_truck": "virtual-0009",
+  "split_membership": {
+    "test": [
+      "virtual-0010",
+      "virtual-0012",
+      "virtual-0014"
+    ],
+    "train": [
+      "virtual-0001",
+      "virtual-0002",
+      "virtual-0003",
+      "virtual-0004",
+      "virtual-0005",
+      "virtual-0006",
+      "virtual-0007",
+      "virtual-0008",
+      "virtual-0013",
+      "virtual-0015",
+      "virtual-0017",
+      "virtual-0018",
+      "virtual-0019",
+      "virtual-0020"
+    ],
+    "validation": [
+      "virtual-0009",
+      "virtual-0011",
+      "virtual-0016"
+    ]
+  },
+  "tree_candidate_fit_rows": 40000,
+  "elapsed_seconds": 243.33224821090698,
+  "versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "sklearn": "1.7.2",
+    "torch": "2.13.0+cu130"
+  },
+  "source_dataset_limitations": "Synthetic, independent30minutejourneys, only3testtrucks, weakwearlabels may be undetectable, matrix alignment partial",
+  "input_exclusion_policy": {
+    "exclude_gnss_brakes": true,
+    "original_input_count": 369,
+    "remaining_input_count": 318,
+    "removed_inputs": [
+      {
+        "attribute": "brake.accumulator_pressure_bar",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.cooling_temp_c",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.disc_temp_c",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.line_pressure_bar",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.oil_temp_c",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.pad_wear_pct",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.pedal_pct",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.stroke_pct",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "gnss.accuracy_m",
+        "reason": "GNSS/GPS-related input"
+      },
+      {
+        "attribute": "gnss.altitude_m",
+        "reason": "GNSS/GPS-related input"
+      },
+      {
+        "attribute": "gnss.heading_deg",
+        "reason": "GNSS/GPS-related input"
+      },
+      {
+        "attribute": "gnss.latitude_deg",
+        "reason": "GNSS/GPS-related input"
+      },
+      {
+        "attribute": "gnss.longitude_deg",
+        "reason": "GNSS/GPS-related input"
+      },
+      {
+        "attribute": "gnss.satellites",
+        "reason": "GNSS/GPS-related input"
+      },
+      {
+        "attribute": "gnss.speed_mps",
+        "reason": "GNSS/GPS-related input"
+      },
+      {
+        "attribute": "brake.accumulator_pressure_bar__available_mask",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.cooling_temp_c__available_mask",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.disc_temp_c__available_mask",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.line_pressure_bar__available_mask",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.oil_temp_c__available_mask",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.pad_wear_pct__available_mask",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.pedal_pct__available_mask",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.stroke_pct__available_mask",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "gnss.accuracy_m__available_mask",
+        "reason": "GNSS/GPS-related input"
+      },
+      {
+        "attribute": "gnss.altitude_m__available_mask",
+        "reason": "GNSS/GPS-related input"
+      },
+      {
+        "attribute": "gnss.heading_deg__available_mask",
+        "reason": "GNSS/GPS-related input"
+      },
+      {
+        "attribute": "gnss.latitude_deg__available_mask",
+        "reason": "GNSS/GPS-related input"
+      },
+      {
+        "attribute": "gnss.longitude_deg__available_mask",
+        "reason": "GNSS/GPS-related input"
+      },
+      {
+        "attribute": "gnss.satellites__available_mask",
+        "reason": "GNSS/GPS-related input"
+      },
+      {
+        "attribute": "gnss.speed_mps__available_mask",
+        "reason": "GNSS/GPS-related input"
+      },
+      {
+        "attribute": "context.mode_braking",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.pad_wear_pct__residual",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.pad_wear_pct__rate",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.pad_wear_pct__residual_slope_120s",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.pad_wear_pct__mean_30s",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.pad_wear_pct__std_30s",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.stroke_pct__residual",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.stroke_pct__rate",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.stroke_pct__residual_slope_120s",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.stroke_pct__mean_30s",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.stroke_pct__std_30s",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.disc_temp_c__residual",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.disc_temp_c__rate",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.disc_temp_c__residual_slope_120s",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.disc_temp_c__mean_30s",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "brake.disc_temp_c__std_30s",
+        "reason": "Brake/braking-related input"
+      },
+      {
+        "attribute": "gnss.accuracy_m__residual",
+        "reason": "GNSS/GPS-related input"
+      },
+      {
+        "attribute": "gnss.accuracy_m__rate",
+        "reason": "GNSS/GPS-related input"
+      },
+      {
+        "attribute": "gnss.accuracy_m__residual_slope_120s",
+        "reason": "GNSS/GPS-related input"
+      },
+      {
+        "attribute": "gnss.accuracy_m__mean_30s",
+        "reason": "GNSS/GPS-related input"
+      },
+      {
+        "attribute": "gnss.accuracy_m__std_30s",
+        "reason": "GNSS/GPS-related input"
+      }
+    ],
+    "target_policy": "All16 labels retained for comparison; brake_wear lacks direct evidence and is not approved for prediction"
+  },
+  "test_evidence_status": "Previously used held-truck benchmark, not a newly untouched test",
+  "threshold_policy": "exact_validation_max_F1_with_1pct_per_label_normal_guard",
+  "health": "Sensor-based unvalidated heuristic, not a DL health target",
+  "RUL": "unavailable_not_validated: no independent run-to-failure or censored histories",
+  "SHAP": "not_run: validation permutation and per-label feature ranks used instead",
+  "artifacts": {
+    "test_predictions.csv": "188c25b91b7147f20fcdd4cbef3b6e315909cca9f03c81bebde3adc9b44fc710",
+    "journey_splits.csv": "f3aa4c8c214681ee8da95db5ab8369ec2df0be44c5e39311b19c71807d06e80d",
+    "detection_delay.csv": "2087eb6dc747fd0cb9e5fefac42d2ea9ecef9c71353349e4029d4d82549e54d3",
+    "calibration_metrics.csv": "d7d1ea3cfef79134a6b183873c3c610dd5634ccdb7477b25e9e0019b06a16935",
+    "selected_model.joblib": "b3ce11f3858917c5aecf055b0f74fea7192035c267ed83d70e497537a7ed5c51",
+    "permutation_importance.csv": "97973b069b85183bb0a7fa4380c9741be307b1f3026ff89b4009adb3e5643665",
+    "excluded_attributes.csv": "642b2d7494db08376555711131e873c2c8d31cebc69ee4645baa9693a6935261",
+    "dense_pca_95_loadings.csv": "7e91a1f186861b2e24bfa46beca6ac9729ac8d9be13f85e5a3ea41fb15735fbc",
+    "dense_pca_90_loadings.csv": "a3aff721cab8c856a9c4b168346793ff6311780abc3975b9e9f3285190178955",
+    "stratified_metrics.csv": "6c1f56397e4250aceaa81ca1f21ed31934885f9b2be471c2eeca67e7454ec285",
+    "model_comparison.csv": "03fcabb7e8dbfbd35a716fb8cffd51df3b35f767d0b94b140d732ea90ca0b2fe",
+    "missing_sensor_robustness.json": "f342af51d986643a75c050387b2e80ff4fc42b931d33381838a3a5d5ee74ec2d",
+    "dense_pca_99_loadings.csv": "b25129eb0984f3d69cc9432449fcfc7d0012154537aab6534edd0e00a17f31a7",
+    "selected_attributes.csv": "b34d6cdb1ce51fccb234ad995bea97939305d23b3a14949439198a656242f647",
+    "per_fault_metrics.csv": "7b32feee554d7b3fe77b39e4ca4f073445faecca85cff2598c72ba75a969784c",
+    "input_exclusion_policy.json": "2e7e1b64a2c230565c3b319c94404701ecba2894b2d2971501b23fa47bcf4cc6",
+    "calibration_bins.csv": "6f96f8639b0f1d49f4697b9e5d2efcf2cda59d66a3d75ed6a3eab8a5c06100b2",
+    "health_assessment.csv": "b466af2b1e652e0bbfe193546f15dc4639c47570435154e4c319f31b34329d86",
+    "thresholds.csv": "6929ca77f976054d930986369412cba5cf0cfd14c7b9d1c65ac6c62448364772",
+    "models/dense_autoencoder/history.csv": "03f15874ee95ba6a0cf3d80ce171a60e59027343e3e46b54e46566f0b75717ae",
+    "models/dense_autoencoder/model.pt": "d004ed499fff333fa04fc1d7d1983d232cc6c40f98d1c12980c2300e89717427",
+    "models/dense_selected/history.csv": "a9a6ebcc3d3ed9eca96432f525764b78ae88a9992d345d7b3023dabe2278d4cc",
+    "models/dense_selected/model.pt": "d34980a380e2483e844c5f3fe2d606fb89a53fe7ae5c1d60b86d3719d736bf76",
+    "models/autoencoder/history.csv": "a597e5962e0b778b5bce584588a40eb3cea51ead42b2fcdeb21d502114a1e892",
+    "models/autoencoder/model.pt": "e689d4b07df5ac63cb83ad941c87f797203e8fb7d0867b26ba61d1918069310f",
+    "models/dense_pca_95/history.csv": "c875de18a6a1e35d8281348ef16d9c491c1607c0cae33d2294bf87e9026a7402",
+    "models/dense_pca_95/model.pt": "df18e394e45b8a6a4d645552e859a20452f66cbc6ae2784a2055ff9228b1a021",
+    "models/tcn/history.csv": "37899acf9ec0a523eb4d7a4b19e23f8e3caed397a5cd0f5787f566561aa9c574",
+    "models/tcn/model.pt": "88d543f92da70fe99ae0339489e587338931d4a510fb6b40fc43dac2ff875241",
+    "models/dense_pca_90/history.csv": "864478344f11ea550903c8651bf68c3a50550953f8bc5e3ad29805f915002b69",
+    "models/dense_pca_90/model.pt": "2db24c68eb39bf5b73a56bc6db7a005f8376b8325f4a5e625f13e4c19a1cb25f",
+    "models/dense_pca_99/history.csv": "2f4f8ffd0acd0ed9889694f7e4b7246755358c6d436eea7a3003098071b9073f",
+    "models/dense_pca_99/model.pt": "969162216df82779715389b58a9c97a4177b9364be5cde269b3960ecd3ded124",
+    "feature_selection/correlation_pruned.csv": "c5fcf1728c748903475dab0df9d15e04976e9b189f6fe36bdd8e2b0783c5b7bf",
+    "feature_selection/per_fault_correlations.csv": "ffb4a46c144e88a2a0d527dab4bf02fab4b6cdd8f06d32a336ff8eeb84925774",
+    "feature_selection/subsets.json": "2740053ffdecf4459690ac561f9f696093692b73faa343bb2837dba4be28b4df",
+    "feature_selection/feature_importance.csv": "463d2b9d259973bf7d75770a90636b162ebb3ad4aa7f1f681032ba903a32ca4a",
+    "feature_selection/mutual_information.csv": "d682f1c257968d4a8093fa4124daa78714c90d86aa90121fd2d02ca51db12974",
+    "feature_selection/preliminary_ranking.csv": "463d2b9d259973bf7d75770a90636b162ebb3ad4aa7f1f681032ba903a32ca4a",
+    "feature_selection/selected_preliminary_ranks.json": "184de1ab04b508974d0d1ceba6a6c9c1dde6fc8b173c08a4afbd708b27a5b320",
+    "feature_selection/column_audit.csv": "c6d0133702193fa05cf4ec8feab9e2e6f1d1ea208e832e3875ac74a409f2eb1f",
+    "feature_selection/numeric_features.csv": "c6d0133702193fa05cf4ec8feab9e2e6f1d1ea208e832e3875ac74a409f2eb1f",
+    "feature_selection/constant_duplicates.csv": "18cf9fad9b3c7ae6acd83ebd65edc80388388df8df6a60709a7d31b3d151b9fb",
+    "feature_selection/training_feature_correlation.npy": "cca193a07397ca431f596b07648b3e25636f60675f0a927e37d92d8e306140f6"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "weights_unchanged": true,
+  "original_artifacts_preserved": true,
+  "reason": "Original 0.01-step threshold grid cannot resolve near-constant calibrated aging scores.",
+  "selection_data": "Only two original validation-tuning trucks; no test thresholds fitted",
+  "test_caveat": "Test already inspected; new test metrics are exploratory second-use. Obtain independent seeds/schedules/trucks before a deployment claim.",
+  "normal_FPR_cap_semantics": "1% per label on normal validation rows; not a guarantee of 1% overall or field false alarms",
+  "comparisons": [
+    {
+      "candidate": "exact_validation_max_F1",
+      "split": "validation_tuning",
+      "macro_AP": 0.8951450799182687,
+      "micro_AP": 0.9100540756938675,
+      "macro_F1": 0.877346017378636,
+      "macro_recall": 0.875626025018424,
+      "micro_F1": 0.8421745608260282,
+      "hamming_loss": 0.017342074805068226,
+      "exact_match": 0.7602948343079922,
+      "normal_false_alarm_rate": 0.2270795385549484,
+      "macro_Brier": 0.01242397119711557,
+      "rows": 16416
+    },
+    {
+      "candidate": "exact_validation_max_F1",
+      "split": "test_second_use_exploratory",
+      "macro_AP": 0.8906088792827682,
+      "micro_AP": 0.9132987594255974,
+      "macro_F1": 0.8464105363262311,
+      "macro_recall": 0.847782582817444,
+      "micro_F1": 0.8106729271541119,
+      "hamming_loss": 0.02128766650422352,
+      "exact_match": 0.7253492527615335,
+      "normal_false_alarm_rate": 0.2610613554337655,
+      "macro_Brier": 0.011981417933005833,
+      "rows": 24624
+    },
+    {
+      "candidate": "normal_guard_1pct_per_fault",
+      "split": "validation_tuning",
+      "macro_AP": 0.8951450799182687,
+      "micro_AP": 0.9100540756938675,
+      "macro_F1": 0.8562388815192514,
+      "macro_recall": 0.8332351665319323,
+      "micro_F1": 0.8697985562568502,
+      "hamming_loss": 0.013116014863547758,
+      "exact_match": 0.8073830409356725,
+      "normal_false_alarm_rate": 0.05019226877150374,
+      "macro_Brier": 0.01242397119711557,
+      "rows": 16416
+    },
+    {
+      "candidate": "normal_guard_1pct_per_fault",
+      "split": "test_second_use_exploratory",
+      "macro_AP": 0.8906088792827682,
+      "micro_AP": 0.9132987594255974,
+      "macro_F1": 0.8393100870999866,
+      "macro_recall": 0.8195991378945964,
+      "micro_F1": 0.8535129646598479,
+      "hamming_loss": 0.015013300032488628,
+      "exact_match": 0.7941439246263807,
+      "normal_false_alarm_rate": 0.06964309584280176,
+      "macro_Brier": 0.011981417933005833,
+      "rows": 24624
+    }
+  ]
+}

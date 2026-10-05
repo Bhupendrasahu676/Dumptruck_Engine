@@ -1,0 +1,199 @@
+{
+  "source_csv": "/home/bhupendra676/Project/Engine/datasets/dump_truck_enhanced_all_conditions.csv",
+  "source_sha256": "2a4790199945f331987897a86f9329bacb03f9b5ac9d0cb893ae2b7d52adf448",
+  "source_schema_sha256": "b5c1650b438ce6731ae1dbf485a4c7f3ca23266079fa96f7b8369072bff253ad",
+  "source_manifest_sha256": "1dcf26c90ea7b63acca9fe6e22120bf8a1b46aa0b23f16dfe73cf0899e39b1ec",
+  "source_selected_attributes": "/home/bhupendra676/Project/Engine/analysis/results_enhanced_multilabel/selected_attributes.csv",
+  "source_features_sha256": "a654d97ab5ad09c9220a85ced33282099f7a6290390fe59626a251220c087156",
+  "seed": 793,
+  "epochs_budget": 18,
+  "input_columns": [
+    "engine.oil_pressure_kpa__residual",
+    "engine.oil_condition_pct__residual",
+    "engine.boost_kpa__residual",
+    "engine.coolant_flow_kg_s__residual",
+    "coolant_condition_pct__residual",
+    "transmission.oil_pressure_kpa__residual",
+    "transmission.oil_condition_pct__residual",
+    "gnss.longitude_deg",
+    "suspension.hydraulic_oil_condition_pct__residual",
+    "engine.oil_level_pct",
+    "engine.coolant_temp_c__residual",
+    "brake.stroke_pct__residual",
+    "gnss.accuracy_m__residual",
+    "gnss.latitude_deg",
+    "transmission.vibration_mm_s__residual",
+    "engine.oil_temp_c__residual"
+  ],
+  "target_columns": [
+    "fault_label.engine_oil_pump_wear",
+    "fault_label.piston_ring_damage",
+    "fault_label.turbo_exhaust_fault",
+    "fault_label.coolant_system_failure",
+    "fault_label.coolant_degradation",
+    "fault_label.gearbox_seal_wear",
+    "fault_label.gearbox_bearing_wear",
+    "fault_label.hydraulic_normal_aging",
+    "fault_label.hydraulic_contamination",
+    "fault_label.bearing_failure",
+    "fault_label.low_oil",
+    "fault_label.overheat",
+    "fault_label.brake_wear",
+    "fault_label.perception_degraded",
+    "fault_label.sensor_fault",
+    "fault_label.unrelated_multi_blip"
+  ],
+  "selected_model": "tcn",
+  "primary_policy": "guarded",
+  "alternate_policy": "maxf1",
+  "split_membership": {
+    "test": [
+      "virtual-0010",
+      "virtual-0012",
+      "virtual-0014"
+    ],
+    "train": [
+      "virtual-0001",
+      "virtual-0002",
+      "virtual-0003",
+      "virtual-0004",
+      "virtual-0005",
+      "virtual-0006",
+      "virtual-0007",
+      "virtual-0008",
+      "virtual-0013",
+      "virtual-0015",
+      "virtual-0017",
+      "virtual-0018",
+      "virtual-0019",
+      "virtual-0020"
+    ],
+    "validation": [
+      "virtual-0009",
+      "virtual-0011",
+      "virtual-0016"
+    ]
+  },
+  "train_rows": 114912,
+  "validation_tuning_rows": 16416,
+  "calibration_rows": 8208,
+  "test_rows": 24624,
+  "calibration_truck": "virtual-0009",
+  "selection_strategy": "raw validation macro AP; absent labels score zero",
+  "models": {
+    "dense": {
+      "best_epoch": 17,
+      "epochs_completed": 18,
+      "device": "cuda",
+      "selection_macro_AP": 0.8644074771742287
+    },
+    "tcn": {
+      "best_epoch": 4,
+      "epochs_completed": 8,
+      "device": "cuda",
+      "selection_macro_AP": 0.8707523485745632
+    }
+  },
+  "verification": {
+    "serialization_reload": [
+      {
+        "bundle": "dense_model.joblib",
+        "kind": "dense",
+        "full_test_rows": 24624,
+        "passed": true,
+        "first_episode_rows": 171,
+        "prefix_batch_size_probability_difference": 0.0,
+        "prefix_batch_size_decision_flips": 0,
+        "full_test_probability_matches_saved_selected": false
+      },
+      {
+        "bundle": "tcn_model.joblib",
+        "kind": "tcn",
+        "full_test_rows": 24624,
+        "passed": true,
+        "first_episode_rows": 171,
+        "prefix_batch_size_probability_difference": 0.0012035369873046875,
+        "prefix_batch_size_decision_flips": 0,
+        "full_test_probability_matches_saved_selected": true
+      },
+      {
+        "bundle": "selected_model.joblib",
+        "kind": "tcn",
+        "full_test_rows": 24624,
+        "passed": true,
+        "first_episode_rows": 171,
+        "prefix_batch_size_probability_difference": 0.0012035369873046875,
+        "prefix_batch_size_decision_flips": 0,
+        "full_test_probability_matches_saved_selected": true
+      },
+      {
+        "bundle": "selected_maxf1_model.joblib",
+        "kind": "tcn",
+        "full_test_rows": 24624,
+        "passed": true,
+        "first_episode_rows": 171,
+        "prefix_batch_size_probability_difference": 0.0012035369873046875,
+        "prefix_batch_size_decision_flips": 0,
+        "full_test_probability_matches_saved_selected": true
+      }
+    ],
+    "frozen_policy_sha256": "bb916013cede62d168f3688f3279e08d1963e6c36a6b2ef9fb818903deb794a7",
+    "frozen_before_test_features": true,
+    "model_inputs": 16,
+    "trained_on_all_train_rows": 114912,
+    "no_test_selection_or_calibration": true,
+    "source_sha256_verified": true,
+    "deployment_ready": false,
+    "export_recovery": "Existing checkpoints/predictions used; no retraining, weight changes or threshold refitting",
+    "numerical_note": "CUDA convolution can vary slightly with batch shape; same-batch checkpoint reload reproduces selected full-test probabilities"
+  },
+  "versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "sklearn": "1.7.2",
+    "torch": "2.13.0+cu130"
+  },
+  "code_sha256": {
+    "analysis/finalize_compact16.py": "5be5d184f631aba49f93b8b5a5c3aa6b2a6100e8f9d7e0dae566a3513c4eb7ef",
+    "analysis/train_compact16.py": "51b1f0ec25a5c3d4fff26e8513772b7d8321a7fafd72fe9f2a2c2be9e85fea23",
+    "analysis/fault_dl.py": "58380c234aa0396cc58f2ff6cee1a54de0256b02b33e49d92a09ea96f52416bf"
+  },
+  "code_revision_note": "ISO8601 timestamp parsing corrected before fitting; reload check corrected after training; checkpoint weights unchanged",
+  "health": "not_trained",
+  "RUL": "unavailable_not_validated",
+  "deployment_ready": false,
+  "artifacts": {
+    "dense_maxf1_thresholds.csv": "c828082042e5406b0518ea23ff3289e572b8a708212a82ccf33360088de3b5ec",
+    "stratified_per_fault_metrics.csv": "3caf0aa8f0bd5e6816d458171212a2ff0b5c1656a7b774e187897b087cf21e9e",
+    "test_predictions.csv": "310d5f84cff7ada920584cbb274f4b2d1cc532f3643d8fefe3b542519f6cf0fe",
+    "journey_splits.csv": "dc7a68ef99963835de8e22adebd5222f27df5a7befa4d9151ddad405635b5669",
+    "detection_delay.csv": "f5ed47414e1c103136b6b7628fdfba8d60da47e609b87287be9d3787470f0053",
+    "calibration_metrics.csv": "3fc89242699dbc6c3652bd83716f3362f59805b26e400710320699a0a0178c53",
+    "verification_receipt.json": "e00ea3605e07c747b525d5775b500deaa022b5d46dd0c01cb45587d72f25dc46",
+    "selected_model.joblib": "04902f0a1e5e1270c667c8d27c9dccf79c80ac6d53b330a65e20fd62d19f9bab",
+    "selected_maxf1_model.joblib": "568927296573d523f24ecbd02cc5ad6b2fb2c413d3fe6b62b59228ce642c8e5d",
+    "tcn_guarded_thresholds.csv": "61d779a645d290119cb4426202e18f9998c421db30365f6ac2455abdd3c62506",
+    "test_predictions_guarded.csv": "310d5f84cff7ada920584cbb274f4b2d1cc532f3643d8fefe3b542519f6cf0fe",
+    "feature_schema.json": "0087fe0d066c328ccc0ba45338cb02ab78f65d484effa85acc162d4f2726497a",
+    "stratified_metrics.csv": "f4288d072069c9d2643b3e88b36ea81e9fadece1271fe6ccaf87e8cf5ea70392",
+    "normal_false_alarms.csv": "fd7732d49b957d23863e9432aa50b0597b075a7cad20fe9283c0ef36a10659f5",
+    "frozen_policy.json": "bb916013cede62d168f3688f3279e08d1963e6c36a6b2ef9fb818903deb794a7",
+    "REPORT.md": "ee9e25fd282d8c25daf52f057b733743f3104ffee049169eccc9f95759675d47",
+    "model_comparison.csv": "6252cccd62785188e924fe4d27f7b1f4c622f30a9c0644e5bdabc2f2bef751ad",
+    "tcn_model.joblib": "04902f0a1e5e1270c667c8d27c9dccf79c80ac6d53b330a65e20fd62d19f9bab",
+    "selected_attributes.csv": "a654d97ab5ad09c9220a85ced33282099f7a6290390fe59626a251220c087156",
+    "per_fault_metrics.csv": "1ac6afa861723e07ff5500f0e1ac1ae9967366200b2861f103602bc68c7aa070",
+    "evaluation_gaps.json": "2fbc86b89d4b25f658a4840a3e0ccf944f6fef20552a5390ebdfc125ab4c91de",
+    "test_predictions_maxf1.csv": "5e556fa268fd933d50570fa79949ad7dc86316adf5a1188e147035b2d5fbc8b4",
+    "dense_guarded_thresholds.csv": "08dc9115b9211e7e937aa6a1148aad2924e3ce57e29ec744f9311e202d880b4c",
+    "tcn_maxf1_thresholds.csv": "77e433b3f41281fb0a63395ec00916c56df8cd081edff7c8b8f4725f99cb85ee",
+    "dense_model.joblib": "ef1db1aff4b03493b85614865b18eb50d175f3c1adef60c400eda0cd8b448ea9",
+    "calibration_bins.csv": "2b3deeef226a2e355ad9228eff26b2d4b06abf2063a7664bf816f45297fe26ba",
+    "thresholds.csv": "cfa4621dfdcfa98a14310b80670a56ef74456a0b7606659004978b5575e843aa",
+    "source/selected_attributes.csv": "a654d97ab5ad09c9220a85ced33282099f7a6290390fe59626a251220c087156",
+    "models/dense/history.csv": "21e76babb156432009381e26bb58a487d447ea09be26c41c719302f1e8ebd47f",
+    "models/dense/model.pt": "f6e225387a3ffa89eeef9d2e8c1d435acf47f2ff47d58de18700badf24b3a779",
+    "models/tcn/history.csv": "943dd32849fc156c4874b946c107f0d807cef0d18f6540c666999569e6f6c463",
+    "models/tcn/model.pt": "cb331c3eb242e0d46faec1866e2babf7b32209cbc700a7a22ae6654bfd579435"
+  }
+}

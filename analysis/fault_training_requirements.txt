@@ -1,0 +1,10 @@
+# Isolated /tmp/opencode/fault-training environment; no global installs required.
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.15.3
+scikit-learn==1.7.2
+joblib==1.5.3
+threadpoolctl==3.7.0
+matplotlib==3.10.8
+# Existing host GPU build used: torch 2.13.0+cu130. Select a compatible official
+# PyTorch CUDA/CPU wheel for the deployment machine rather than renaming it.

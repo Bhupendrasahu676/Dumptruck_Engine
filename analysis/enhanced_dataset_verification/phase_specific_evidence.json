@@ -1,0 +1,72 @@
+{
+  "single_fault_active_developed_screen": {
+    "engine_oil_pump_wear": {
+      "active_developed_rows": 2497,
+      "matched_rows": 2464,
+      "match_rate": 0.986784140969163
+    },
+    "piston_ring_damage": {
+      "active_developed_rows": 2564,
+      "matched_rows": 2421,
+      "match_rate": 0.9442277691107644
+    },
+    "turbo_exhaust_fault": {
+      "active_developed_rows": 2571,
+      "matched_rows": 2547,
+      "match_rate": 0.9906651108518086
+    },
+    "coolant_system_failure": {
+      "active_developed_rows": 2658,
+      "matched_rows": 1790,
+      "match_rate": 0.673438675696012
+    },
+    "coolant_degradation": {
+      "active_developed_rows": 2341,
+      "matched_rows": 1918,
+      "match_rate": 0.8193079880392995
+    },
+    "gearbox_seal_wear": {
+      "active_developed_rows": 2694,
+      "matched_rows": 1948,
+      "match_rate": 0.7230883444691908
+    },
+    "gearbox_bearing_wear": {
+      "active_developed_rows": 2596,
+      "matched_rows": 2233,
+      "match_rate": 0.8601694915254238
+    }
+  },
+  "hydraulic_phase_evidence": {
+    "hydraulic_normal_aging": {
+      "primary_episodes": 40,
+      "samples_with_residual_slope": 3899,
+      "samples_vibration_above_6_3": 740,
+      "episodes_showing_some_high_vibration": 14,
+      "episodes_showing_some_fast_drop_below_minus_0_01": 3
+    },
+    "hydraulic_contamination": {
+      "primary_episodes": 40,
+      "samples_with_residual_slope": 3919,
+      "samples_vibration_above_6_3": 3301,
+      "episodes_showing_some_high_vibration": 40,
+      "episodes_showing_some_fast_drop_below_minus_0_01": 40
+    }
+  },
+  "mode_rows": {
+    "hauling": 144000,
+    "idle": 7680,
+    "downslope": 12480
+  },
+  "phase_rows": {
+    "urban": 81600,
+    "highway": 43200,
+    "expressway": 39360
+  },
+  "incorrect_phase_rows": 0,
+  "split_rows": {
+    "train": 114912,
+    "validation": 24624,
+    "test": 24624
+  },
+  "note": "Screen match rates are not classifier accuracy; hydraulic noise/accelerated-aging and short history require careful interpretation."
+}

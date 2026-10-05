@@ -1,0 +1,17 @@
+fault,threshold,objective,tuning_partition
+fault_label.engine_oil_pump_wear,0.8,max_F1,two_validation_trucks
+fault_label.piston_ring_damage,0.55,max_F1,two_validation_trucks
+fault_label.turbo_exhaust_fault,0.32,max_F1,two_validation_trucks
+fault_label.coolant_system_failure,0.47000000000000003,max_F1,two_validation_trucks
+fault_label.coolant_degradation,0.3,max_F1,two_validation_trucks
+fault_label.gearbox_seal_wear,0.32,max_F1,two_validation_trucks
+fault_label.gearbox_bearing_wear,0.8,max_F1,two_validation_trucks
+fault_label.hydraulic_normal_aging,0.01,max_F1,two_validation_trucks
+fault_label.hydraulic_contamination,0.2,max_F1,two_validation_trucks
+fault_label.bearing_failure,0.34,max_F1,two_validation_trucks
+fault_label.low_oil,0.17,max_F1,two_validation_trucks
+fault_label.overheat,0.19,max_F1,two_validation_trucks
+fault_label.brake_wear,0.14,max_F1,two_validation_trucks
+fault_label.perception_degraded,0.12,max_F1,two_validation_trucks
+fault_label.sensor_fault,0.26,max_F1,two_validation_trucks
+fault_label.unrelated_multi_blip,0.62,max_F1,two_validation_trucks

@@ -1,0 +1,203 @@
+column,role,reason,dtype,missing,unique
+timestamp,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",str,0,171
+step,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",int64,0,171
+elapsed_s,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",float64,0,171
+scenario,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",str,0,3
+mode,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",str,0,3
+payload_class,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",str,0,5
+payload_mass_t,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",float64,0,5
+rated_capacity_t,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",float64,0,1
+payload_utilization_pct,candidate,Observable/estimated telemetry; availability must be confirmed in vehicle,float64,0,5
+stress_level_pct,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",float64,0,343
+payload.payload_class,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",str,0,5
+payload.mass_t,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",float64,0,5
+payload.rated_capacity_t,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",float64,0,1
+payload.utilization_pct,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",float64,0,5
+payload.over_capacity,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",bool,0,2
+faults.engine_overheat,excluded,"Simulator injection flag or rule-derived fault, not a raw measurement",bool,0,2
+faults.low_oil_pressure,excluded,"Simulator injection flag or rule-derived fault, not a raw measurement",bool,0,2
+faults.transmission_slip,excluded,"Simulator injection flag or rule-derived fault, not a raw measurement",bool,0,1
+faults.brake_wear,excluded,"Simulator injection flag or rule-derived fault, not a raw measurement",bool,0,2
+faults.suspension_overload,excluded,"Simulator injection flag or rule-derived fault, not a raw measurement",bool,0,2
+faults.frame_strain,excluded,"Simulator injection flag or rule-derived fault, not a raw measurement",bool,0,2
+faults.gnss_degraded,excluded,"Simulator injection flag or rule-derived fault, not a raw measurement",bool,0,2
+faults.lidar_obstructed,excluded,"Simulator injection flag or rule-derived fault, not a raw measurement",bool,0,2
+faults.radar_fault,excluded,"Simulator injection flag or rule-derived fault, not a raw measurement",bool,0,2
+faults.imu_fault,excluded,"Simulator injection flag or rule-derived fault, not a raw measurement",bool,0,2
+faults.payload_overload,excluded,"Simulator injection flag or rule-derived fault, not a raw measurement",bool,0,2
+faults.dss_alert,excluded,"Simulator injection flag or rule-derived fault, not a raw measurement",bool,0,2
+imu.acceleration_x_mps2,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,170
+imu.acceleration_y_mps2,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,211
+imu.acceleration_z_mps2,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,543
+imu.angular_rate_x_dps,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1376
+imu.angular_rate_y_dps,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,912
+imu.angular_rate_z_dps,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,789
+imu.roll_deg,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,749
+imu.pitch_deg,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,645
+imu.yaw_deg,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,170
+imu.vibration_rms_g,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,666
+engine.rpm,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,285
+engine.load_pct,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,2199
+engine.torque_nm,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1009
+engine.power_kw,excluded,Derived energy/stress/diagnostic output or route-specific location/category,float64,0,1035
+engine.coolant_temp_c,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,2068
+engine.oil_temp_c,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,2192
+engine.oil_pressure_kpa,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,2950
+engine.fuel_rate_lph,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,2142
+engine.boost_kpa,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1268
+engine.exhaust_temp_c,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,5226
+engine.vibration_rms_g,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,628
+engine.throttle_position_pct,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,2181
+engine.oil_level_pct,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1058
+engine.fuel_level_pct,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,693
+engine.exhaust_temperatures_c.0,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,2154
+engine.exhaust_temperatures_c.1,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,2249
+engine.exhaust_temperatures_c.2,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,2253
+engine.exhaust_temperatures_c.3,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,2216
+engine.exhaust_temperatures_c.4,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,2232
+engine.exhaust_temperatures_c.5,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,2233
+engine.air_filter_restriction_kpa,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,366
+engine.coolant_inlet_temp_c,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1126
+engine.coolant_flow_kg_s,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,258
+engine.thermostat_open_pct,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,233
+engine.coolant_energy_flow_kw,excluded,Derived energy/stress/diagnostic output or route-specific location/category,float64,0,2954
+engine.fuel_energy_input_kw,excluded,Derived energy/stress/diagnostic output or route-specific location/category,float64,0,2941
+engine.exhaust_energy_flow_kw,excluded,Derived energy/stress/diagnostic output or route-specific location/category,float64,0,2941
+engine.effective_power_kw,excluded,Derived energy/stress/diagnostic output or route-specific location/category,float64,0,1035
+engine.mechanical_loss_kw,excluded,Derived energy/stress/diagnostic output or route-specific location/category,float64,0,2715
+engine.remainder_loss_kw,excluded,Derived energy/stress/diagnostic output or route-specific location/category,float64,0,1496
+engine.coolant_energy_pct,excluded,Derived energy/stress/diagnostic output or route-specific location/category,float64,0,1842
+engine.exhaust_energy_pct,excluded,Derived energy/stress/diagnostic output or route-specific location/category,float64,0,1193
+engine.transient_index_pct,excluded,Derived energy/stress/diagnostic output or route-specific location/category,float64,0,171
+engine.block_vibration_mm_s,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,620
+engine.coolant_pump_temp_c,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,2068
+transmission.gear,candidate,Observable/estimated telemetry; some channels are synthetic proxies,int64,0,6
+transmission.input_rpm,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,285
+transmission.output_rpm,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,166
+transmission.oil_temp_c,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1515
+transmission.slip_pct,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,336
+transmission.efficiency_pct,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,208
+transmission.output_torque_nm,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,2414
+transmission.status,excluded,Derived energy/stress/diagnostic output or route-specific location/category,str,0,1
+transmission.powertrain_oil_pressure_bar,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1213
+transmission.axle_temp_c,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1797
+transmission.oil_pressure_kpa,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,698
+transmission.vibration_mm_s,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,316
+brake.pedal_pct,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,84
+brake.line_pressure_bar,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,162
+brake.disc_temp_c,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1506
+brake.pad_wear_pct,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,635
+brake.abs_active,excluded,Constant in training split,bool,0,1
+brake.parking_brake,excluded,Constant in training split,bool,0,1
+brake.oil_temp_c,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1248
+brake.cooling_temp_c,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1351
+brake.accumulator_pressure_bar,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,678
+brake.stroke_pct,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,550
+suspension.ride_height_mm,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1574
+suspension.hydraulic_pressure_bar,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1749
+suspension.compression_pct,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1628
+suspension.left_load_pct,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,160
+suspension.right_load_pct,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,160
+suspension.shock_temp_c,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1544
+suspension.front_left_pressure_bar,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1729
+suspension.front_right_pressure_bar,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1728
+suspension.rear_left_pressure_bar,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1730
+suspension.rear_right_pressure_bar,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1730
+suspension.hydraulic_oil_condition_pct,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1740
+suspension.actuator_vibration_mm_s,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,390
+frame.strain_microstrain,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1707
+frame.stress_mpa,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1734
+frame.deflection_mm,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,1354
+frame.twist_deg,candidate,Observable/estimated telemetry; some channels are synthetic proxies,float64,0,633
+frame.fatigue_index_pct,excluded,Derived energy/stress/diagnostic output or route-specific location/category,float64,0,1524
+gnss.latitude_deg,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",float64,0,170
+gnss.longitude_deg,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",float64,0,170
+gnss.altitude_m,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",float64,0,114
+gnss.speed_mps,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",float64,0,155
+gnss.heading_deg,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",float64,0,165
+gnss.accuracy_m,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",float64,0,516
+gnss.satellites,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",int64,0,10
+gnss.fix_type,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",str,0,3
+lidar.obstacle_distance_m,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",float64,0,725
+lidar.obstacle_confidence_pct,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",float64,0,281
+lidar.points_per_scan,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",int64,0,819
+lidar.scan_rate_hz,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",float64,0,169
+lidar.blocked,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",bool,0,2
+lidar.obstacle_class,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",str,0,3
+radar.target_distance_m,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",float64,0,754
+radar.relative_speed_mps,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",float64,0,146
+radar.target_confidence_pct,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",float64,0,269
+radar.object_count,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",int64,0,2
+radar.sensor_ok,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",bool,0,2
+radar.target_class,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",str,0,3
+dss.collision_warning,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",bool,0,1
+dss.rollover_warning,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",bool,0,2
+dss.overspeed_warning,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",bool,0,2
+dss.emergency_braking,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",bool,0,1
+dss.fatigue_alert,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",bool,0,2
+dss.alert_level,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",str,0,3
+dss.driver_message,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",str,0,3
+dss.camera_online,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",bool,0,2
+dss.driver_presence_pct,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",float64,0,69
+dss.seatbelt_fastened,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",bool,0,1
+dss.distraction_score_pct,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",float64,0,571
+dss.fatigue_score_pct,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",float64,0,783
+dss.camera_fps,excluded,"Excluded by requested no GNSS/GPS, LiDAR, radar, DSS or camera analysis",float64,0,317
+engine_health.score,excluded,"Target, derived label, or post-diagnostic output (leakage)",float64,0,9400
+engine_health.classification,excluded,"Target, derived label, or post-diagnostic output (leakage)",str,0,5
+engine_health.rul_hours,excluded,"Target, derived label, or post-diagnostic output (leakage)",float64,0,64589
+engine_health.recommended_action,excluded,"Target, derived label, or post-diagnostic output (leakage)",str,0,5
+engine_health.contributing_factors.0,excluded,"Target, derived label, or post-diagnostic output (leakage)",str,747,10
+engine_health.traffic_light,excluded,"Target, derived label, or post-diagnostic output (leakage)",str,0,3
+engine_health.rul_range_hours.0,excluded,"Target, derived label, or post-diagnostic output (leakage)",float64,0,58909
+engine_health.rul_range_hours.1,excluded,"Target, derived label, or post-diagnostic output (leakage)",float64,0,61967
+overhaul_progress_pct,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",float64,0,171
+body_position_pct,candidate,Observable/estimated telemetry; availability must be confirmed in vehicle,float64,0,270
+hoist_angle_deg,candidate,Observable/estimated telemetry; availability must be confirmed in vehicle,float64,0,157
+chassis_pitch_deg,candidate,Observable/estimated telemetry; availability must be confirmed in vehicle,float64,0,207
+rack_deg,candidate,Observable/estimated telemetry; availability must be confirmed in vehicle,float64,0,695
+engine_load_pct,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",float64,0,5
+drive_cycle,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",str,0,1
+start_condition,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",str,0,2
+cycle_phase,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",str,0,3
+cycle_source,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",str,0,1
+cycle_version,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",str,0,1
+cumulative_fuel_energy_kwh,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",float64,0,3926
+cumulative_fuel_volume_l,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",float64,0,3894
+coolant_condition_pct,candidate,Observable/estimated telemetry; availability must be confirmed in vehicle,float64,0,802
+operational_statuses.engine_block_temperature,excluded,"Target, derived label, or post-diagnostic output (leakage)",str,0,3
+operational_statuses.engine_oil_temperature,excluded,"Target, derived label, or post-diagnostic output (leakage)",str,0,3
+operational_statuses.exhaust_temperature,excluded,"Target, derived label, or post-diagnostic output (leakage)",str,0,3
+operational_statuses.engine_oil_pressure,excluded,"Target, derived label, or post-diagnostic output (leakage)",str,0,3
+operational_statuses.engine_block_vibration,excluded,"Target, derived label, or post-diagnostic output (leakage)",str,0,3
+operational_statuses.gearbox_oil_temperature,excluded,"Target, derived label, or post-diagnostic output (leakage)",str,0,3
+operational_statuses.transmission_oil_pressure,excluded,"Target, derived label, or post-diagnostic output (leakage)",str,0,1
+operational_statuses.gearbox_vibration,excluded,"Target, derived label, or post-diagnostic output (leakage)",str,0,3
+operational_statuses.hydraulic_oil_condition,excluded,"Target, derived label, or post-diagnostic output (leakage)",str,0,3
+operational_statuses.hydraulic_actuator_vibration,excluded,"Target, derived label, or post-diagnostic output (leakage)",str,0,3
+operational_statuses.coolant_pump_temperature,excluded,"Target, derived label, or post-diagnostic output (leakage)",str,0,3
+operational_statuses.coolant_condition,excluded,"Target, derived label, or post-diagnostic output (leakage)",str,0,2
+combination_id,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",str,0,960
+combination_index,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",int64,0,960
+simulation_seed,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",int64,0,1
+scenario_input,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",str,0,3
+payload_class_input,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",str,0,5
+start_condition_input,excluded,"ID, time/cycle shortcut, simulator configuration, or redundant payload representation",str,0,2
+fault_combination,excluded,"Simulator injection flag or rule-derived fault, not a raw measurement",str,0,32
+fault_overheat,excluded,"Simulator injection flag or rule-derived fault, not a raw measurement",bool,0,2
+fault_bearing_failure,excluded,"Simulator injection flag or rule-derived fault, not a raw measurement",bool,0,2
+fault_low_oil,excluded,"Simulator injection flag or rule-derived fault, not a raw measurement",bool,0,2
+fault_brake_wear,excluded,"Simulator injection flag or rule-derived fault, not a raw measurement",bool,0,2
+fault_perception_degraded,excluded,"Simulator injection flag or rule-derived fault, not a raw measurement",bool,0,2
+engine_health_score,excluded,"Target, derived label, or post-diagnostic output (leakage)",float64,0,9400
+engine_health_classification,excluded,"Target, derived label, or post-diagnostic output (leakage)",str,0,5
+engine_health_traffic_light,excluded,"Target, derived label, or post-diagnostic output (leakage)",str,0,3
+rul_hours,excluded,"Target, derived label, or post-diagnostic output (leakage)",float64,0,64589
+rul_low_hours,excluded,"Target, derived label, or post-diagnostic output (leakage)",float64,0,58909
+rul_high_hours,excluded,"Target, derived label, or post-diagnostic output (leakage)",float64,0,61967
+health_confidence,excluded,"Target, derived label, or post-diagnostic output (leakage)",str,0,3
+health_confidence_pct,excluded,"Target, derived label, or post-diagnostic output (leakage)",int64,0,3
+recommended_action,excluded,"Target, derived label, or post-diagnostic output (leakage)",str,0,5
+active_fault_count,excluded,"Target, derived label, or post-diagnostic output (leakage)",int64,0,12
+faults_json,excluded,"Target, derived label, or post-diagnostic output (leakage)",str,0,272
+operational_statuses_json,excluded,"Target, derived label, or post-diagnostic output (leakage)",str,0,1010

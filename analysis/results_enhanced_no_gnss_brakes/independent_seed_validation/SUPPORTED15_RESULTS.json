@@ -1,0 +1,18 @@
+{
+  "score": {
+    "candidate": "no_gnss_brakes_supported15",
+    "split": "fresh_seed_20261007",
+    "macro_AP": 0.8772294630663708,
+    "micro_AP": 0.8910812853310961,
+    "macro_F1": 0.8380905658575202,
+    "macro_recall": 0.7842207672121314,
+    "micro_F1": 0.8356609910082266,
+    "hamming_loss": 0.018004988576578843,
+    "exact_match": 0.7580959567377225,
+    "normal_false_alarm_rate": 0.03924947348267279,
+    "macro_Brier": 0.01575010195252293,
+    "rows": 15903
+  },
+  "excluded_label": "fault_label.brake_wear",
+  "normal_semantics": "No positive supported15labels; includes brake-only source readings."
+}

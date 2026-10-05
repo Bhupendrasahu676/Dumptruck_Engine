@@ -1,0 +1,33 @@
+{
+  "source": "datasets/dump_truck_cwtvc_all_combinations.csv",
+  "source_sha256": "4a66d7f704c729e31ed090999eecd99ec2e30cea6be0588a7890e3ab62395d9a",
+  "rows": 164160,
+  "original_columns": 202,
+  "numeric_candidate_columns": 95,
+  "unique_telemetry_inputs": 93,
+  "correlation_pruned_inputs": 41,
+  "selected_input_count": 8,
+  "pca_components": 19,
+  "pca_variance_retained": 0.9603237958124533,
+  "train_rows": 98496,
+  "fit_rows": 29952,
+  "validation_rows": 32832,
+  "test_rows": 32832,
+  "test_groups": [
+    "ideal|heavy",
+    "overhaul|medium",
+    "stress|light"
+  ],
+  "validation_groups": [
+    "ideal|light",
+    "overhaul|heavy",
+    "stress|medium"
+  ],
+  "selection_rule": "Smallest original subset within 10% of best validation health_MAE/100 + RUL_MAE/12000",
+  "versions": {
+    "pandas": "3.0.6",
+    "numpy": "2.5.3",
+    "sklearn": "1.9.1",
+    "matplotlib": "3.11.2"
+  }
+}

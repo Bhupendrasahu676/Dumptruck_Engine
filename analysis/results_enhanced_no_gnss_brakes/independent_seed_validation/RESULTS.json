@@ -1,0 +1,54 @@
+{
+  "score": {
+    "candidate": "frozen_alarm_guarded_model",
+    "split": "fresh_seed_external_all_rows",
+    "macro_AP": 0.8306721298708657,
+    "micro_AP": 0.8689441093506343,
+    "macro_F1": 0.797811272234022,
+    "macro_recall": 0.7450267474499129,
+    "micro_F1": 0.8147928775034243,
+    "hamming_loss": 0.01966217065962397,
+    "exact_match": 0.7238256932654216,
+    "normal_false_alarm_rate": 0.04605400879212895,
+    "macro_Brier": 0.016836594601165072,
+    "rows": 15903
+  },
+  "seed": 20261007,
+  "rows": 15903,
+  "receipt": {
+    "output_path": "/home/bhupendra676/Project/Engine/analysis/results_enhanced_no_gnss_brakes/independent_seed_validation/independent_fault_batch.csv",
+    "schema_path": "/home/bhupendra676/Project/Engine/analysis/results_enhanced_no_gnss_brakes/independent_seed_validation/independent_fault_batch.schema.json",
+    "manifest_path": "/home/bhupendra676/Project/Engine/analysis/results_enhanced_no_gnss_brakes/independent_seed_validation/independent_fault_batch.manifest.json",
+    "engines": 3,
+    "episodes": 93,
+    "rows": 15903,
+    "input_columns": 369,
+    "split_membership": {
+      "train": [
+        "virtual-0001"
+      ],
+      "validation": [
+        "virtual-0003"
+      ],
+      "test": [
+        "virtual-0002"
+      ]
+    },
+    "sha256": {
+      "independent_fault_batch.csv": "ed16fa2647e2db3f9f0f863ce8504b55082c7313d31553b2cd603503f0dda56d",
+      "independent_fault_batch.schema.json": "b5c1650b438ce6731ae1dbf485a4c7f3ca23266079fa96f7b8369072bff253ad",
+      "independent_fault_batch.manifest.json": "e4c170e1b2de8e2271dd13a034807f13b6133a6effac31b2a6768f52a2d69a48"
+    }
+  },
+  "model_filename": "selected_model.joblib",
+  "independent_engine_variant_seeds": [
+    2021506079,
+    3789446094,
+    4118039551
+  ],
+  "overlap_original_variant_seeds": false,
+  "weights_and_thresholds_frozen_before_generation": true,
+  "training_or_tuning_performed": false,
+  "batch_semantics": "All rows are external evaluation, regardless locally generated split metadata. Engine ID strings are batch-local; independent engine_seed sets establish distinct synthetic variants.",
+  "limitations": "Only3additional virtualvariants, identical physics/routefamily; not field validation or confirmed rootcauses/RUL"
+}

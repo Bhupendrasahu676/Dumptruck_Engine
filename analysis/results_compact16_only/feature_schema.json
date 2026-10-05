@@ -1,0 +1,362 @@
+{
+  "input_columns": [
+    "engine.oil_pressure_kpa__residual",
+    "engine.oil_condition_pct__residual",
+    "engine.boost_kpa__residual",
+    "engine.coolant_flow_kg_s__residual",
+    "coolant_condition_pct__residual",
+    "transmission.oil_pressure_kpa__residual",
+    "transmission.oil_condition_pct__residual",
+    "gnss.longitude_deg",
+    "suspension.hydraulic_oil_condition_pct__residual",
+    "engine.oil_level_pct",
+    "engine.coolant_temp_c__residual",
+    "brake.stroke_pct__residual",
+    "gnss.accuracy_m__residual",
+    "gnss.latitude_deg",
+    "transmission.vibration_mm_s__residual",
+    "engine.oil_temp_c__residual"
+  ],
+  "selected_original_attributes": [
+    "engine.oil_pressure_kpa__residual",
+    "engine.oil_condition_pct__residual",
+    "engine.boost_kpa__residual",
+    "engine.coolant_flow_kg_s__residual",
+    "coolant_condition_pct__residual",
+    "transmission.oil_pressure_kpa__residual",
+    "transmission.oil_condition_pct__residual",
+    "gnss.longitude_deg",
+    "suspension.hydraulic_oil_condition_pct__residual",
+    "engine.oil_level_pct",
+    "engine.coolant_temp_c__residual",
+    "brake.stroke_pct__residual",
+    "gnss.accuracy_m__residual",
+    "gnss.latitude_deg",
+    "transmission.vibration_mm_s__residual",
+    "engine.oil_temp_c__residual"
+  ],
+  "model_input_columns": [
+    "engine.oil_pressure_kpa__residual",
+    "engine.oil_condition_pct__residual",
+    "engine.boost_kpa__residual",
+    "engine.coolant_flow_kg_s__residual",
+    "coolant_condition_pct__residual",
+    "transmission.oil_pressure_kpa__residual",
+    "transmission.oil_condition_pct__residual",
+    "gnss.longitude_deg",
+    "suspension.hydraulic_oil_condition_pct__residual",
+    "engine.oil_level_pct",
+    "engine.coolant_temp_c__residual",
+    "brake.stroke_pct__residual",
+    "gnss.accuracy_m__residual",
+    "gnss.latitude_deg",
+    "transmission.vibration_mm_s__residual",
+    "engine.oil_temp_c__residual"
+  ],
+  "target_columns": [
+    "fault_label.engine_oil_pump_wear",
+    "fault_label.piston_ring_damage",
+    "fault_label.turbo_exhaust_fault",
+    "fault_label.coolant_system_failure",
+    "fault_label.coolant_degradation",
+    "fault_label.gearbox_seal_wear",
+    "fault_label.gearbox_bearing_wear",
+    "fault_label.hydraulic_normal_aging",
+    "fault_label.hydraulic_contamination",
+    "fault_label.bearing_failure",
+    "fault_label.low_oil",
+    "fault_label.overheat",
+    "fault_label.brake_wear",
+    "fault_label.perception_degraded",
+    "fault_label.sensor_fault",
+    "fault_label.unrelated_multi_blip"
+  ],
+  "input_dimension": 16,
+  "preprocessing": "training-only median imputation (keep_empty_features=True), StandardScaler",
+  "feature_selection": "none; immutable supplied list",
+  "additional_context_inputs": [],
+  "dependencies": {
+    "engine.oil_pressure_kpa__residual": {
+      "sensors": [
+        "engine.oil_pressure_kpa",
+        "frame.strain_microstrain"
+      ],
+      "context": [
+        "context.rpm",
+        "context.load_pct",
+        "context.demand_pct",
+        "context.ambient_c",
+        "context.payload_utilization_pct",
+        "context.transient",
+        "context.mode",
+        "context.cold_start",
+        "context.drive_cycle"
+      ],
+      "history": true,
+      "requirements": "Healthy context prior and commissioning/calibration; no oracle readings; trailing observations, elapsed intervals and episode resets"
+    },
+    "engine.oil_condition_pct__residual": {
+      "sensors": [
+        "engine.oil_condition_pct"
+      ],
+      "context": [
+        "context.rpm",
+        "context.load_pct",
+        "context.demand_pct",
+        "context.ambient_c",
+        "context.payload_utilization_pct",
+        "context.transient",
+        "context.mode",
+        "context.cold_start",
+        "context.drive_cycle"
+      ],
+      "history": true,
+      "requirements": "Healthy context prior and commissioning/calibration; no oracle readings; trailing observations, elapsed intervals and episode resets"
+    },
+    "engine.boost_kpa__residual": {
+      "sensors": [
+        "engine.boost_kpa",
+        "frame.strain_microstrain"
+      ],
+      "context": [
+        "context.rpm",
+        "context.load_pct",
+        "context.demand_pct",
+        "context.ambient_c",
+        "context.payload_utilization_pct",
+        "context.transient",
+        "context.mode",
+        "context.cold_start",
+        "context.drive_cycle"
+      ],
+      "history": true,
+      "requirements": "Healthy context prior and commissioning/calibration; no oracle readings; trailing observations, elapsed intervals and episode resets"
+    },
+    "engine.coolant_flow_kg_s__residual": {
+      "sensors": [
+        "engine.coolant_flow_kg_s"
+      ],
+      "context": [
+        "context.rpm",
+        "context.load_pct",
+        "context.demand_pct",
+        "context.ambient_c",
+        "context.payload_utilization_pct",
+        "context.transient",
+        "context.mode",
+        "context.cold_start",
+        "context.drive_cycle"
+      ],
+      "history": true,
+      "requirements": "Healthy context prior and commissioning/calibration; no oracle readings; trailing observations, elapsed intervals and episode resets"
+    },
+    "coolant_condition_pct__residual": {
+      "sensors": [
+        "coolant_condition_pct",
+        "frame.strain_microstrain"
+      ],
+      "context": [
+        "context.rpm",
+        "context.load_pct",
+        "context.demand_pct",
+        "context.ambient_c",
+        "context.payload_utilization_pct",
+        "context.transient",
+        "context.mode",
+        "context.cold_start",
+        "context.drive_cycle"
+      ],
+      "history": true,
+      "requirements": "Healthy context prior and commissioning/calibration; no oracle readings; trailing observations, elapsed intervals and episode resets"
+    },
+    "transmission.oil_pressure_kpa__residual": {
+      "sensors": [
+        "transmission.oil_pressure_kpa",
+        "frame.strain_microstrain"
+      ],
+      "context": [
+        "context.rpm",
+        "context.load_pct",
+        "context.demand_pct",
+        "context.ambient_c",
+        "context.payload_utilization_pct",
+        "context.transient",
+        "context.mode",
+        "context.cold_start",
+        "context.drive_cycle"
+      ],
+      "history": true,
+      "requirements": "Healthy context prior and commissioning/calibration; no oracle readings; trailing observations, elapsed intervals and episode resets"
+    },
+    "transmission.oil_condition_pct__residual": {
+      "sensors": [
+        "transmission.oil_condition_pct"
+      ],
+      "context": [
+        "context.rpm",
+        "context.load_pct",
+        "context.demand_pct",
+        "context.ambient_c",
+        "context.payload_utilization_pct",
+        "context.transient",
+        "context.mode",
+        "context.cold_start",
+        "context.drive_cycle"
+      ],
+      "history": true,
+      "requirements": "Healthy context prior and commissioning/calibration; no oracle readings; trailing observations, elapsed intervals and episode resets"
+    },
+    "gnss.longitude_deg": {
+      "sensors": [
+        "gnss.longitude_deg"
+      ],
+      "context": [],
+      "history": false,
+      "requirements": "Observed numeric channel; vehicle availability must be confirmed"
+    },
+    "suspension.hydraulic_oil_condition_pct__residual": {
+      "sensors": [
+        "suspension.hydraulic_oil_condition_pct",
+        "frame.strain_microstrain"
+      ],
+      "context": [
+        "context.rpm",
+        "context.load_pct",
+        "context.demand_pct",
+        "context.ambient_c",
+        "context.payload_utilization_pct",
+        "context.transient",
+        "context.mode",
+        "context.cold_start",
+        "context.drive_cycle"
+      ],
+      "history": true,
+      "requirements": "Healthy context prior and commissioning/calibration; no oracle readings; trailing observations, elapsed intervals and episode resets"
+    },
+    "engine.oil_level_pct": {
+      "sensors": [
+        "engine.oil_level_pct"
+      ],
+      "context": [],
+      "history": false,
+      "requirements": "Observed numeric channel; vehicle availability must be confirmed"
+    },
+    "engine.coolant_temp_c__residual": {
+      "sensors": [
+        "engine.coolant_temp_c",
+        "frame.strain_microstrain",
+        "engine.coolant_energy_flow_kw"
+      ],
+      "context": [
+        "context.rpm",
+        "context.load_pct",
+        "context.demand_pct",
+        "context.ambient_c",
+        "context.payload_utilization_pct",
+        "context.transient",
+        "context.mode",
+        "context.cold_start",
+        "context.drive_cycle"
+      ],
+      "history": true,
+      "requirements": "Healthy context prior and commissioning/calibration; no oracle readings; trailing observations, elapsed intervals and episode resets"
+    },
+    "brake.stroke_pct__residual": {
+      "sensors": [
+        "brake.stroke_pct",
+        "brake.pedal_pct",
+        "brake.pad_wear_pct"
+      ],
+      "context": [
+        "context.rpm",
+        "context.load_pct",
+        "context.demand_pct",
+        "context.ambient_c",
+        "context.payload_utilization_pct",
+        "context.transient",
+        "context.mode",
+        "context.cold_start",
+        "context.drive_cycle"
+      ],
+      "history": true,
+      "requirements": "Healthy context prior and commissioning/calibration; no oracle readings; trailing observations, elapsed intervals and episode resets"
+    },
+    "gnss.accuracy_m__residual": {
+      "sensors": [
+        "gnss.accuracy_m",
+        "frame.strain_microstrain"
+      ],
+      "context": [
+        "context.rpm",
+        "context.load_pct",
+        "context.demand_pct",
+        "context.ambient_c",
+        "context.payload_utilization_pct",
+        "context.transient",
+        "context.mode",
+        "context.cold_start",
+        "context.drive_cycle"
+      ],
+      "history": true,
+      "requirements": "Healthy context prior and commissioning/calibration; no oracle readings; trailing observations, elapsed intervals and episode resets"
+    },
+    "gnss.latitude_deg": {
+      "sensors": [
+        "gnss.latitude_deg"
+      ],
+      "context": [],
+      "history": false,
+      "requirements": "Observed numeric channel; vehicle availability must be confirmed"
+    },
+    "transmission.vibration_mm_s__residual": {
+      "sensors": [
+        "transmission.vibration_mm_s",
+        "frame.strain_microstrain"
+      ],
+      "context": [
+        "context.rpm",
+        "context.load_pct",
+        "context.demand_pct",
+        "context.ambient_c",
+        "context.payload_utilization_pct",
+        "context.transient",
+        "context.mode",
+        "context.cold_start",
+        "context.drive_cycle"
+      ],
+      "history": true,
+      "requirements": "Healthy context prior and commissioning/calibration; no oracle readings; trailing observations, elapsed intervals and episode resets"
+    },
+    "engine.oil_temp_c__residual": {
+      "sensors": [
+        "engine.oil_temp_c",
+        "frame.strain_microstrain"
+      ],
+      "context": [
+        "context.rpm",
+        "context.load_pct",
+        "context.demand_pct",
+        "context.ambient_c",
+        "context.payload_utilization_pct",
+        "context.transient",
+        "context.mode",
+        "context.cold_start",
+        "context.drive_cycle"
+      ],
+      "history": true,
+      "requirements": "Healthy context prior and commissioning/calibration; no oracle readings; trailing observations, elapsed intervals and episode resets"
+    }
+  },
+  "dependency_warning": "Exactly sixteen model columns do not imply sixteen physical sensors. Residuals require healthy context priors, commissioning/calibration, source sensors, trailing observation state and episode resets; context is not added to the model input. GNSS longitude/latitude remain route proxies and GNSS accuracy and brake.stroke residual remain explicitly requested inputs. Brake stroke also depends on pedal and pad-wear measurements. No GNSS/brake ablation or reselection is performed.",
+  "synthetic_only": true,
+  "deployment_ready": false,
+  "health_training": false,
+  "RUL_training": false,
+  "excluded_source_fields": "all non-fixed columns including labels, truth, diagnostics, health, RUL, identifiers, context and timestamps",
+  "tcn": {
+    "window": 12,
+    "causal": true,
+    "episode_reset": true,
+    "left_padding": "repeat episode first observation"
+  }
+}

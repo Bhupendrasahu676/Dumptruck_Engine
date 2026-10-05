@@ -1,0 +1,5 @@
+{
+  "gaps": [],
+  "detection_delay": "computed separately for both policies; misses censored, not zero delay",
+  "strata": "overlapping descriptive truth-evaluation groups; not independent populations"
+}

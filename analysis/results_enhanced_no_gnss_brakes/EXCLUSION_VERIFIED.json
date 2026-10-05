@@ -1,0 +1,17 @@
+{
+  "verified": true,
+  "removed_features": 51,
+  "all_schema_branches_and_PCA_loadings_checked": true,
+  "new_input_counts": {
+    "source": 318,
+    "eligible": 220,
+    "PCA_components": 94,
+    "compact": 32
+  },
+  "old_artifacts_unchanged": 68,
+  "all16_targets_retained_for_benchmark": true,
+  "unsupported_targets": [
+    "fault_label.brake_wear"
+  ],
+  "comparison15label_caveat": "Normal means no supported15labels; can include original brake-only rows."
+}

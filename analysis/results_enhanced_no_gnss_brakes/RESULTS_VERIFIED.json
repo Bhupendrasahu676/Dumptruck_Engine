@@ -1,0 +1,71 @@
+{
+  "verified": true,
+  "rows": 24624,
+  "probability_columns": 16,
+  "metrics_recomputed": {
+    "candidate": "dense_pca_99_sigmoid_calibrated",
+    "split": "test",
+    "macro_AP": 0.8325753200547407,
+    "micro_AP": 0.8750971067577459,
+    "macro_F1": 0.7812255420433166,
+    "macro_recall": 0.7620866067882964,
+    "micro_F1": 0.8141801919501532,
+    "hamming_loss": 0.018772335932423653,
+    "exact_match": 0.7480912930474334,
+    "normal_false_alarm_rate": 0.060152386044646435,
+    "macro_Brier": 0.014450974328711895,
+    "rows": 24624
+  },
+  "artifact_digest_checks": 44,
+  "truck_bootstrap_200": {
+    "macro_AP": {
+      "low_2_5": 0.8253229241904452,
+      "high_97_5": 0.8401557176707637
+    },
+    "macro_F1": {
+      "low_2_5": 0.7636247749579432,
+      "high_97_5": 0.7917915387841389
+    },
+    "macro_recall": {
+      "low_2_5": 0.7608604038236824,
+      "high_97_5": 0.7712298015165715
+    },
+    "normal_false_alarm_rate": {
+      "low_2_5": 0.04805125467164976,
+      "high_97_5": 0.08433734939759036
+    }
+  },
+  "bootstrap_caveat": "Only three synthetic test trucks; intervals are fragile, not field confidence",
+  "weakest_faults": [
+    {
+      "fault": "fault_label.brake_wear",
+      "AP": 0.06206559177980758,
+      "recall": 0.0,
+      "F1": 0.0
+    },
+    {
+      "fault": "fault_label.hydraulic_normal_aging",
+      "AP": 0.08850435505972408,
+      "recall": 0.03507404520654715,
+      "F1": 0.05642633228840126
+    },
+    {
+      "fault": "fault_label.sensor_fault",
+      "AP": 0.7227855023494986,
+      "recall": 0.5636363636363636,
+      "F1": 0.636650868878357
+    },
+    {
+      "fault": "fault_label.unrelated_multi_blip",
+      "AP": 0.875487997669279,
+      "recall": 0.7359050445103857,
+      "F1": 0.779874213836478
+    },
+    {
+      "fault": "fault_label.engine_oil_pump_wear",
+      "AP": 0.8776283246636083,
+      "recall": 0.7062256809338522,
+      "F1": 0.8071150639244025
+    }
+  ]
+}
